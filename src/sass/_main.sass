@@ -1,0 +1,1284 @@
+.header
+  position: relative
+  z-index: 2
+  margin-bottom: 40px
+  background: $lightbg
+  .logo
+    position: absolute
+    left: 0
+    top: 50%
+    margin-top: -50px
+  .schedule
+    display: inline-block
+    vertical-align: middle
+    margin-right: 38px
+  .btn
+    vertical-align: middle
+    margin-right: 38px
+  .phone-number
+    display: inline-block
+    vertical-align: middle
+
+.header_large
+  background: none
+  margin: 0
+  &:before
+    content: ""
+    position: absolute
+    z-index: -1
+    top: 0
+    left: 0
+    right: 0
+    bottom: 100px
+
+.header__inner
+  padding-left: 250px
+  position: relative
+
+.header__row
+  text-align: right
+  line-height: 70px
+  height: 70px
+  white-space: nowrap
+  & + &
+    border-top: 1px solid #D0D5DF
+
+
+.nav
+  display: inline-block
+  vertical-align: middle
+  line-height: normal
+
+.nav__list
+  font-size: 0
+  li
+    display: inline-block
+    &:first-child
+      .nav__link
+        padding-left: 0
+    &:last-child
+      .nav__link
+        padding-right: 0
+
+.nav__link
+  display: inline-block
+  padding: 14px
+  font-size: 13px
+  +spacing(70)
+  text-decoration: none
+  color: #052E75
+  text-transform: uppercase
+  +trans(color)
+
+  &:hover
+    color: $red
+  &.is-active
+    color: #6B6C6D
+
+.main-page
+  background: $lightbg
+
+.map-wrapper
+  position: relative
+  z-index: 0
+  padding: 180px 0
+  margin: -100px 0
+  overflow: hidden
+  box-sizing: border-box
+  .l
+    position: relative
+    z-index: 1
+  & + *
+    position: relative
+    z-index: 1
+
+.parallax
+  position: absolute
+  z-index: 0
+  // top: -150px
+  // bottom: -150px
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  // background: #070E1D img-url('map-index.jpg') no-repeat center center
+  background-size: cover
+
+
+.columns
+  margin: 0 -10px
+  +clr
+
+.columns__text,
+.columns__figure
+  float: left
+  width: 50%
+  box-sizing: border-box
+  padding: 0 10px
+
+.columns__text
+  padding-top: 35px
+
+
+.slider
+  position: relative
+  background: $lightbg
+  box-sizing: border-box
+  max-width: 480px
+  margin: auto
+
+.slider_mrg
+  margin-top: 60px
+  margin-bottom: 60px
+
+.slider_about
+  position: relative
+  left: 80px
+
+.slider__head
+  position: relative
+  padding: 0 60px 12px 0
+  border-bottom: 1px solid $hrcolor
+  .title
+    margin-bottom: 0
+  .slider__buttons
+    top: 2px
+    right: 2px
+    left: auto
+    bottom: auto
+
+.slider__slides
+  +clr
+
+.slider__buttons
+  position: absolute
+  bottom: 30px
+  right: 30px
+
+.slider__prev,
+.slider__next
+  width: 24px
+  height: 24px
+  line-height: 24px
+  background: #FFF
+  box-shadow: 2px 2px 0 0 #D1D7E2
+  border-radius: 50%
+  text-align: center
+  line-height: normal
+  color: #BBC3D1
+  font-size: 10px
+  +trans(color)
+  &:active
+    transform: translate(0,1px)
+    box-shadow: none
+  &:before
+    @extend %ico
+    content: ""
+    position: relative
+    top: 1px
+  &:hover
+    color: $red
+
+.slider__prev
+  margin-right: 3px
+  &:before
+    content: $ico-arr-left
+    left: -1px
+
+.slider__next
+  &:before
+    content: $ico-arr-right
+    left: 1px
+
+.slider_narrow
+  background: none
+  margin-top: 48px
+  .slider__slides
+    padding: 0
+    margin: 0 -20px
+  .slider__prev,
+  .slider__next
+    background: $lightbg
+  a
+    text-decoration: underline
+    &:hover
+      color: $red
+
+
+.slide
+  display: none
+  float: left
+  position: relative
+  padding: 50px 40px 55px
+  box-sizing: border-box
+  +clr
+  .title
+    margin-bottom: 7px
+  &:first-child
+    display: block
+  &.slick-slide
+    display: block
+
+.slide__img
+  display: block
+  float: left
+  position: relative
+  // width: 96px
+  // height: 140px
+  // border: 2px solid #FFF
+  +img-shadow
+  cursor: pointer
+  text-decoration: none
+  // &:after
+  //   opacity: 0
+  //   visibility: hidden
+  //   content: ""
+  //   position: absolute
+  //   bottom: 7px
+  //   right: 7px
+  //   +sprite(search)
+  //   +trans
+  img
+    display: block
+    max-width: 100%
+  // &:hover
+  //   &:after
+  //     opacity: 1
+  //     visibility: visible
+
+.slide__content
+  margin-left: 120px
+
+.slide_narrow
+  padding: 20px
+  width: 100%
+  .slide__img
+    float: right
+    &:first-child
+      float: left
+  .slide__content
+    clear: both
+    margin: 0
+    padding-top: 20px
+
+
+.large-slider
+  margin: 60px 0
+  +clr
+
+.large-slider__aside
+  float: left
+  width: 230px
+  margin-right: -230px
+  height: 100%
+  +vertical
+  white-space: nowrap
+  &:before
+    min-height: 373px
+
+.large-slider__main
+  margin-left: 250px
+  position: relative
+
+.large-slider__slides
+  +clr
+
+.large-slider__aside-text
+  display: inline-block
+  vertical-align: bottom
+  +f(i)
+  font-size: 15px
+  color: rgba($dark, 0.6)
+  text-align: right
+  white-space: normal
+
+.large-slider__prev,
+.large-slider__next
+  position: absolute
+  top: 50%
+  font-size: 50px
+  line-height: 1
+  color: #FFF
+  background: none
+  margin-top: -50px
+  padding: 25px
+  .ico
+    display: block
+    +trans(color)
+  &:hover
+    color: $red
+
+.large-slider__prev
+  left: 0
+
+.large-slider__next
+  right: 0
+
+
+.large-slide
+  display: none
+  width: 100%
+  height: 373px
+  box-sizing: border-box
+  float: left
+  background-position: center center
+  background-repeat: no-repeat
+  background-size: cover
+  &:first-child
+    display: block
+  &.slick-slide
+    display: block
+
+
+
+.tile
+  display: block
+  text-decoration: none
+  &:hover
+    .title_link
+      > span
+        color: $red
+        border-color: rgba($red, 0.3)
+
+.tile__head
+  position: relative
+  height: 245px
+  background-size: cover
+  background-position: center center
+  background-repeat: no-repeat
+
+.tile__label
+  position: absolute
+  bottom: 26px
+  left: 26px
+  font-size: 15px
+  line-height: 1.47
+  font-style: normal
+  font-weight: normal
+  color: #FFF
+  background: $link
+  border-radius: 3px
+  padding: 3px 10px
+
+.tile__content
+  background: #FFF
+  padding: 26px 28px 35px
+
+
+.news-block
+  padding-left: 40px
+  .title
+    margin-bottom: 60px
+  .news + .news
+    margin-top: 23px
+
+
+.links
+  padding: 50px 0
+  border: solid $hrcolor
+  border-width: 1px 0
+  font-size: 18px
+  line-height: 1.55
+  +spacing(30)
+  +clr
+  a
+    text-decoration: none
+    display: inline-block
+    color: $link
+    +trans(color)
+    &:hover
+      color: $red
+
+.links__list
+  float: left
+  width: 25%
+  box-sizing: border-box
+  padding: 0 50px 0 0
+  > li
+    margin-top: 22px
+    &:first-child
+      margin-top: 0
+
+.links__sublist
+  margin-bottom: 35px
+  padding-left: 10px
+  font-size: 16px
+  > li
+    margin-top: 22px
+
+.links_sitemap
+  padding: 0
+  border: none
+
+
+.footer
+  margin-top: 80px
+  background: $lightbg
+  position: relative
+  #map-canvas
+    height: 365px
+  .scroll-to-top
+    position: absolute
+    bottom: 190px
+    left: 50px
+    transform: translate3d(-100px,0,0)
+    opacity: 0
+    visibility: hidden
+    transition: all 0.5s ease
+    &.is-active
+      transform: translate3d(0,0,0)
+      opacity: 1
+      visibility: visible
+
+.footer__row
+  display: table
+  table-layout: fixed
+  border-collapse: collapse
+  width: 100%
+  font-size: 15px
+
+.footer__row_align-mid
+  .footer__cell
+    vertical-align: middle
+    padding-top: 50px
+  .phone-number
+    margin: -20px 0 0 -50px
+  .icon-logo-small
+    position: relative
+    top: 10px
+
+.footer__cell
+  display: table-cell
+  width: 490px
+  height: 150px
+  box-sizing: border-box
+  padding: 35px 0 25px
+  &:first-child
+    width: 245px
+  &:last-child
+    width: 245px
+    text-align: right
+
+.footer__bottom
+  background: #FFF
+
+.footer__links
+  margin-top: 23px
+  +spacing(30)
+  color: $link
+  font-size: 0
+  > li
+    font-size: 15px
+    display: inline-block
+    vertical-align: middle
+    &:before
+      content: "|"
+      display: inline-block
+      margin: 0 15px
+      vertical-align: middle
+      color: #CECECE
+    &:first-child
+      &:before
+        content: none
+  a
+    color: inherit
+    display: inline-block
+    text-decoration: none
+    +trans
+    &:hover
+      color: $red
+
+.footer__made-in
+  font-size: 15px
+  color: #000
+  .flex-logotype
+    margin-left: 10px
+
+
+.news-tiles
+  margin: 20px -10px 0
+  .news
+    float: left
+    width: 33.333%
+    padding: 0 percentage(10/1000)
+
+.news-tiles__row
+  margin-top: 40px
+  padding-top: 51px
+  position: relative
+  &:before
+    content: ""
+    position: absolute
+    top: 0
+    left: percentage(10/1000)
+    right: percentage(10/1000)
+    height: 1px
+    background: $hrcolor
+  +clr
+  &:first-child
+    margin-top: 0
+
+.article
+  font-size: 15px
+  color: $dark
+  line-height: 1.6
+  +spacing(30)
+  p
+    margin: 28px 0
+    &:first-child
+      margin-top: 0
+    &:last-child
+      margin-bottom: 0
+  em
+    +f(i)
+  .title
+    margin: 33px 0 18px
+    &:first-child
+      margin-top: 0
+
+.lead
+  font-size: 18px
+
+p.lead
+  font-size: 18px
+  &:first-child
+    margin-top: 0
+  &:last-child
+    margin-bottom: 0
+
+
+ul.marked-list
+  list-style-type: none
+  > li
+    position: relative
+    padding-left: 20px
+    &:before
+      content: ""
+      position: absolute
+      top: em(10,15)
+      left: 0
+      width: 6px
+      height: 6px
+      border-radius: 50%
+      background: $blue
+
+ol.marked-list
+  list-style-type: decimal
+
+.marked-list_links
+  color: $link
+  > li
+    margin-top: 10px
+  a
+    text-decoration: none
+    color: inherit
+    +trans(color)
+    &:hover
+      color: $red
+
+.simple-list
+  list-style-type: none
+  > li
+    margin-top: 8px
+    &:first-child
+      margin-top: 0
+    &.lead
+      margin-bottom: 15px
+
+
+.grid
+  margin: 35px -10px -30px
+  font-size: 0
+  &:first-child
+    margin-top: 0
+
+.grid__item
+  display: inline-block
+  vertical-align: top
+  width: 50%
+  box-sizing: border-box
+  padding: 0 10px
+  margin: 0 0 30px -1px
+  font-size: 16px
+
+.grid_testimonials
+  margin-bottom: -70px
+  .grid__item
+    margin-bottom: 70px
+
+
+.short-about
+  position: relative
+  margin: 50px 0
+  padding: 0 0 0 212px
+  min-height: 212px
+  box-sizing: border-box
+  background: $lightbg
+  color: $dark
+  font-size: 15px
+  line-height: 1.6
+  &:first-child
+    margin-top: 0
+  &:last-child
+    margin-bottom: 0
+  .title
+    margin-bottom: 5px
+
+.short-about__pic
+  position: absolute
+  z-index: 1
+  top: 0
+  left: 0
+  bottom: 0
+  width: 212px
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+  cursor: pointer
+  &:after
+    content: ""
+    position: absolute
+    bottom: 13px
+    right: 13px
+    +sprite(increase)
+    background-color: rgba(#FFF, 0.7)
+    border-radius: 50%
+    border: 8px solid transparent
+
+.short-about__content
+  padding: 22px 30px 35px 38px
+
+.short-about__row
+  display: block
+  dd
+    display: inline
+    +f(b)
+    font-style: normal
+  dt
+    display: inline
+    font-style: normal
+  a
+    color: $link
+    text-decoration: none
+    +trans(color)
+    &:hover
+      color: $red
+  sup
+    vertical-align: super
+    font-size: 9px
+
+.short-about_mod
+  padding-left: 238px
+  .short-about__pic
+    top: 10px
+    left: 10px
+    bottom: 10px
+    width: 228px
+    cursor: default
+    &:after
+      display: none
+  .short-about__content
+    padding-bottom: 30px
+
+.short-about-group
+  text-align: right
+  margin: 20px 0
+  .short-about
+    margin: 15px 0
+    text-align: left
+
+
+.table
+  font-size: 15px
+  line-height: 1.333
+  border-collapse: collapse
+  thead
+    background: $blue
+    border: solid $blue
+    border-width: 1px 1px 0 1px
+    th, td
+      color: #FFF
+      vertical-align: middle
+  tbody
+    border: solid $hrcolor
+    border-width: 0 1px 1px 1px
+    tr
+      &:first-child
+        td, th
+          padding-top: 20px
+      &:last-child
+        td, th
+          padding-bottom: 35px
+  th, td
+    text-align: left
+    padding: 15px 0 16px 20px
+    box-sizing: border-box
+    vertical-align: top
+    &:last-child
+      text-align: right
+      padding-right: 20px
+      padding-left: 0
+
+.table__producer
+  display: block
+  font-size: 18px
+  margin-bottom: 14px
+
+.table__links
+  display: inline-block
+  position: relative
+  padding-top: 15px
+  +f(i)
+  &:before
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    width: 130px
+    height: 1px
+    background: $hrcolor
+  .file
+    margin-top: 13px
+
+.table_head-hidden
+  thead
+    background: none
+    border: none
+    user-select: none
+    pointer-events: none
+    td, th
+      height: 0
+      padding-top: 0
+      padding-bottom: 0
+      line-height: 0
+      overflow: hidden
+      vertical-align: top
+      background: none
+
+
+.table_product
+  table-layout: fixed
+  td, th
+    &:first-child
+      width: percentage(175/730)
+    &:nth-child(2)
+      width: percentage(120/730)
+    &:nth-child(3)
+      width: percentage(135/730)
+    &:nth-child(4)
+      width: percentage(90/730)
+    &:nth-child(5)
+      width: percentage(75/730)
+    &:nth-child(6)
+      width: percentage(110/730)
+
+
+
+// .container-more
+.container-more__content
+  display: none
+
+.container-more__btn
+  width: 100%
+  box-sizing: border-box
+  background: $lightbg
+  display: block
+  height: 48px
+  text-align: center
+  border: 1px solid $hrcolor
+  border-width: 0 1px 1px 1px
+  +f(b)
+  font-size: 15px
+  color: $link
+  +trans(color)
+  text-decoration: none
+  &:hover
+    color: $red
+
+.container-more_simple
+  .container-more__btn
+    display: inline-block
+    width: auto
+    margin-top: 14px
+    background: none
+    text-align: left
+    line-height: 30px
+    height: auto
+    border: none
+
+.container-more_objects
+  margin-top: 50px
+  .l-col
+    margin-bottom: 50px
+  .container-more__btn
+    height: 67px
+    line-height: 67px
+    border: none
+    +f(r)
+    font-size: 18px
+
+
+.advantages
+  margin-top: 30px
+  background-color: $lightbg
+  padding: 8px
+  background-image: repeating-linear-gradient(-39deg, #FFF 0, #FFF 2px, $hrcolor 2px, $hrcolor 3px, #FFF 3px, #FFF 5px)
+  text-align: center
+
+.advantages__inner
+  background: #FFF
+  padding: 15px 0 30px
+
+
+.advantage
+  display: block
+  color: inherit
+  text-decoration: none
+  line-height: 1.333
+  font-size: 15px
+  max-width: 150px
+  margin: auto
+  & + &
+    margin-top: 30px
+  &:hover
+    color: inherit
+    .advantage__title
+      color: $red
+      border-color: rgba($red, 0.3)
+
+.advantage__icon
+  width: 80px
+  height: 80px
+  margin: 0 auto 5px
+  border-radius: 50%
+  box-sizing: border-box
+  text-align: center
+  line-height: 80px
+  background: $lightbg
+  .icon
+    vertical-align: middle
+
+.advantage__title
+  font-size: 18px
+  text-decoration: none
+
+.advantage__text
+  display: block
+  margin: 10px auto 0
+
+
+.about-news
+  max-width: 630px
+  margin: 40px auto
+
+.about-intro
+  margin: 40px 0
+
+.metro-station
+  display: inline-block
+  &:before
+    content: ""
+    display: inline-block
+    position: relative
+    top: 1px
+    margin-right: 5px
+    +sprite(metro)
+
+.info
+  display: inline-block
+  position: relative
+  padding-left: 30px
+  color: $blue
+  text-decoration: none
+  cursor: pointer
+  +trans
+  > span
+    border-bottom: 1px dotted
+  &:before
+    content: ""
+    position: absolute
+    left: 0
+    top: 50%
+    margin-top: -10px
+    +sprite(info)
+  &:hover
+    color: $red
+
+
+.contact
+  font-size: 18px
+  line-height: 1.555
+  +spacing(30)
+  em
+    +f(i)
+    font-size: 15px
+    color: $lightgray
+    color: rgba($dark, 0.6)
+  a
+    color: $blue
+    &:hover
+      color: $red
+  small
+    color: #616161
+    font-size: 14px
+  hr
+    display: block
+    border: none
+    max-width: 340px
+    margin: 30px 0
+    height: 1px
+    background: $hrcolor
+    &:last-child
+      margin-bottom: 0
+  > img
+    display: block
+    max-width: 100%
+    margin-bottom: 38px
+  .info
+    margin: 7px 0 15px
+  .btn
+    display: block
+    margin: 20px 0
+
+
+.contact_small
+  font-size: 15px
+  line-height: 1.86
+
+
+.message
+  box-sizing: border-box
+  padding: 45px 65px
+  width: 410px
+  margin: auto
+  font-size: 15px
+  line-height: 1.67
+  text-align: center
+  a
+    text-decoration: underline
+  .title
+    margin-bottom: 18px
+
+.message__close
+  display: inline-block
+  margin-top: 28px
+
+
+.form
+  padding: 45px 80px 75px
+  box-sizing: border-box
+  width: 410px
+  margin: auto
+  font-size: 15px
+  line-height: 1.4
+  .title
+    text-align: center
+    margin-bottom: 10px
+  .btn
+    margin-top: 22px
+
+.field
+  margin-top: 13px
+
+.field__label
+  font-size: 15px
+  sup
+    color: $red
+
+.input
+  display: block
+  width: 100%
+  padding: 5px 10px
+  box-sizing: border-box
+  height: 36px
+  line-height: normal
+  background: #F9F9F9
+  border-radius: 0
+  border: 1px solid #BFC5D0
+  +f(r)
+  font-size: 15px
+  color: $dark
+  +trans
+  transition-property: background, border-color
+  &:focus, &.valid
+    background: #FFF
+  &.error
+    border-color: $red
+    color: $red
+    background: #F9F9F9
+
+textarea.input
+  height: 110px
+  resize: none
+
+
+.driving-direction
+  width: 760px
+  box-sizing: border-box
+  padding: 35px 50px 60px
+  > img
+    display: block
+    max-width: 100%
+    margin: auto
+  .title
+    margin-bottom: 17px
+    + .title
+      margin-top: 0
+  .title_medium
+    margin-bottom: 10px
+
+
+.delivery-item
+  margin-top: 40px
+  em
+    color: rgba($dark, 0.6)
+
+.services-item
+  margin-top: 40px
+  .title
+    line-height: 1
+
+
+.accordion__item
+  margin-top: 20px
+  &:first-child
+    margin-top: 0
+
+.accordion__btn
+  position: relative
+  padding: 0 16px 1px 0
+  background: none
+  text-decoration: none
+  color: $link
+  font-size: 18px
+  +spacing(30)
+  +trans(color)
+  > span
+    border-bottom: 1px dotted
+  &:after
+    @extend %ico
+    content: $ico-caret-down
+    position: absolute
+    top: 6px
+    right: 0
+    font-size: 12px
+  &:hover
+    color: $red
+  &.is-active
+    // color: $blue
+    color: $dark
+    &:after
+      content: $ico-caret-up
+
+.accordion__content
+  margin-top: 20px
+  display: none
+
+.qa
+  a
+    text-decoration: underline
+
+
+.testimonial
+  font-size: 15px
+  line-height: 1.46
+  +clr
+
+.testimonial__pic
+  display: block
+  float: left
+  +img-shadow
+  // width: 96px
+  // height: 140px
+  // overflow: hidden
+  // +trans(box-shadow)
+  // &:hover
+  //   box-shadow: 0 3px 15px rgba(0, 35, 96, 0.5)
+  img
+    display: block
+    width: 100%
+    max-width: 100%
+
+.testimonial__text
+  margin-left: 120px
+  p
+    margin: 10px 0
+    &:first-child
+      margin-top: 0
+    &:last-child
+      margin-bottom: 0
+  .lead
+    line-height: 1.22
+
+.file-list
+  > li
+    margin-top: 24px
+    &:first-child
+      margin-top: 0
+
+.popup
+  display: none
+  position: fixed
+  z-index: 999
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  padding: 40px
+  +vertical
+  text-align: center
+  white-space: nowrap
+  background: $blue
+  background: rgba($blue, 0.9)
+  overflow: auto
+  &.is-active
+    .popup__inner
+      transform: translate3d(0,0,0)
+      opacity: 1
+
+.popup__inner
+  display: inline-block
+  vertical-align: middle
+  position: relative
+  text-align: left
+  white-space: normal
+  background: #FFF
+  box-shadow: 0 1px 20px 0 rgba(0, 40, 111, 0.76)
+  border-bottom: 3px solid #D4D6DB
+  transform: translate3d(0,20%,0) scale(0.5)
+  transition: all 0.3s ease
+  opacity: 0
+
+.popup__close
+  position: absolute
+  bottom: 100%
+  right: 0
+  +f(r)
+  font-size: 15px
+  line-height: 30px
+  padding-right: 25px
+  background: none
+  color: #FFF
+  +trans(color)
+  &:after
+    @extend %ico
+    content: $ico-close
+    font-size: 12px
+    position: absolute
+    top: 50%
+    right: 0
+    margin-top: -6px
+  &:hover
+    color: $red
+
+.popup_gallery
+  .popup__inner
+    max-width: 100%
+    max-height: 100%
+    transition: none !important
+
+
+.popup-slider
+  position: relative
+
+.popup-slider__slides
+  +clr
+
+.popup-slider__slide
+  float: left
+
+.popup-slider__prev,
+.popup-slider__next
+  position: absolute
+  z-index: 2
+  top: 50%
+  background: none
+  font-size: 50px
+  padding: 50px
+  margin: -75px 0 0
+  color: #FFF
+  +trans(color)
+  &:hover
+    color: $red
+  &.fancybox-nav
+    top: 0
+    margin: 0
+    box-sizing: border-box
+    white-space: nowrap
+    min-width: 150px
+    &:after
+      content: ""
+      display: inline-block
+      vertical-align: middle
+      height: 100%
+      width: 0
+      font-size: 0
+    &:before
+      font-size: 50px
+      display: inline-block
+      vertical-align: middle
+
+.popup-slider__prev
+  right: 100%
+  &.fancybox-nav
+    text-align: right
+.popup-slider__next
+  left: 100%
+  &.fancybox-nav
+    text-align: left
+
+
+@keyframes fancy
+  from
+    transform: translate3d(0,20%,0) scale(0.5)
+  to
+    transform: translate3d(0,0,0)
+
+@keyframes fade-in
+  from
+    opacity: 0
+  to
+    opacity: 1
+
+.fancybox-skin
+  animation: fancy 0.3s ease 1
+  box-shadow: 0 1px 20px 0 rgba(0, 40, 111, 0.76) !important
+  border-bottom: 3px solid #D4D6DB
+  border-radius: 0 !important
+  &.is-close
+    transform: translate3d(0,20%,0) scale(0.5)
+    opacity: 0
+    transition: all 0.3s ease
+
+.fancybox-nav,
+.fancybox-item .popup__close
+  animation: fade-in 0.3s ease 1
+
+
+.contacts-group
+  margin: 0 -10px -20px
+  font-size: 0
+  .contact
+    display: inline-block
+    vertical-align: top
+    width: 33.3%
+    box-sizing: border-box
+    padding: 0 10px
+    margin-bottom: 20px
+
+
+.map-small
+  width: 480px
+  height: 260px
+
+
+.not-found
+  text-align: center
+  margin: 80px 0 200px
+  .btn-wrap
+    margin-top: 53px
+
+.not-found__title
+  +f(b, 120, 0.03)
+  line-height: 1
+  color: #D0D5E0

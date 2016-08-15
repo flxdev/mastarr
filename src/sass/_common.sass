@@ -1,0 +1,62 @@
+$lightbg: #EDEFF3
+$lightgray: #ADAFB2
+$blue: #0C419E
+$link: #012C77
+$dark: #151515
+$red: #E43C3C
+$hrcolor: #D0D3DD
+
++font("Calibri-Bold", Calibri-Bold)
++font("Calibri-BoldItalic", Calibri-BoldItalic)
++font("Calibri-Italic", Calibri-Italic)
++font("Calibri", Calibri)
+
+=f($name, $font-size: null, $letter-spacing: null)
+  $font-family: null
+  @if $name == "r"
+    $font-family: "Calibri"
+  @if $name == "b"
+    $font-family: "Calibri-Bold"
+  @if $name == "bi"
+    $font-family: "Calibri-BoldItalic"
+  @if $name == "i"
+    $font-family: "Calibri-Italic"
+    font-style: normal
+  font-family: $font-family, Helvetica, Arial, sans-serif
+  font-weight: normal
+  @if $font-size != null
+    font-size: $font-size + px
+  @if $letter-spacing != null
+    letter-spacing: $letter-spacing + em
+
+=family
+  // font-family: Calibri, Helvetica, Arial, sans-serif
+  +f(r)
+
+body
+  +family
+  background: #FFF
+  color: $dark
+  font-size: 16px
+  line-height: 1.4
+  +spacing(30)
+  +smoothfont
+
+button
+  +family
+
+b, strong
+  +f(b)
+
+a
+  color: $link
+  text-decoration: none
+  +trans(color)
+  &:hover
+    color: $red
+
+hr
+  margin: 40px 0
+  border: none
+  height: 1px
+  background: #EDEFF3

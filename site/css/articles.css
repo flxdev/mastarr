@@ -1,0 +1,17 @@
+.articles .grid__item {
+	width: 100%;
+}
+.articles .grid__item .news {
+	display: inline-block;
+	width: 100%;
+}
+.articles .grid__item .news__pic {
+	width: 50%;
+	float: left;
+	margin-right: 20px;
+}
+.articles .grid__item .caption {
+	/*display: inline-block;*/
+	color: rgba(21, 21, 21, 0.7);
+	font-size: 15px;
+}

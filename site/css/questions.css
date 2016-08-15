@@ -1,0 +1,22 @@
+.pagin-question {
+	font-size: 0;
+	margin-bottom: 37px;
+	margin-left: -22px;
+}
+.pagin-question__item {
+	font-size: 15px;
+	font-family: "Calibri",Helvetica,Arial,sans-serif;
+	font-weight: bold;
+	border-bottom: 1px solid;
+	margin-right: 3px;
+	display: inline-block;
+	margin-left: 22px;
+	margin-bottom: 10px;
+	padding: 2px 0; 
+}
+.pagin-question__item.active {
+	background-color: #0c419e;
+	color: #fff;
+	border-radius: 3px;
+	padding: 2px 16px;
+}

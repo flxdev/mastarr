@@ -1,0 +1,56 @@
+//BEGIN header
+header.header(class=headerMod)
+  .l
+    .header__inner
+      .header__logo
+        a(href="pages.html").logo Масстар
+
+      .header__row
+        .schedule
+          span.schedule__time
+            | 9:00–18:00
+          ul.schedule__days
+            li.is-workday
+            li.is-workday
+            li.is-workday
+            li.is-workday
+            li.is-workday
+            li
+            li
+        button.btn.btn_blue(type="button")
+          //- span.icon.icon-phone-blue
+          span.ico.ico-phone
+          span Обратный звонок
+        .phone-number
+          span
+            | Многоканальный &mdash;
+          a(href="tel:4952150144")
+            | (495) 215-01-44
+
+      .header__row
+        nav.nav
+          ul.nav__list
+            li
+              a.nav__link.is-active(href="#")
+                | Главная
+            li
+              a.nav__link(href="#")
+                | Каталог
+            li
+              a.nav__link(href="#")
+                | О компании
+            li
+              a.nav__link(href="#")
+                | Новости
+            li
+              a.nav__link(href="#")
+                | Прайс-листы
+            li
+              a.nav__link(href="#")
+                | Доставка и оплата
+            li
+              a.nav__link(href="#")
+                | Контакты
+
+    include _menu
+//END header

@@ -1,0 +1,29 @@
+block vars
+
+doctype html
+html
+  head
+    include partials/_head
+
+  //- if need some css class for body just add var bodyClass='my-class' on page in block vars
+  body(class=bodyClass)
+
+    //BEGIN out
+    .out
+      block header
+        include partials/_header
+      block content
+    //END out
+
+    include partials/_footer
+
+    //LOAD SCRIPTS
+    block scripts
+      script(type="text/javascript", src="js/lib/jquery.min.js")
+      script(type="text/javascript", src="js/lib/slick.min.js")
+      script(type="text/javascript", src="js/lib/jquery.fancybox.js")
+      script(type="text/javascript", src="js/lib/jquery.touchSwipe.min.js")
+      script(type="text/javascript", src="js/lib/jquery.validate.js")
+      //- script(type="text/javascript", src="js/lib/messages_ru.js")
+      script(type="text/javascript", src="js/main.js")
+

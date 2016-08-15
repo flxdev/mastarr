@@ -1,0 +1,107 @@
+.contact_small p{
+	width:80%;
+	line-height: 1.5;
+	margin-top: 5px;
+}
+.contact_list-title{
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.333;
+  margin-top: 30px;
+}
+.title_small{
+	margin:23px 0;
+}
+.l-col hr {
+    display: inline-block;
+    border: none;
+    width: 100%;
+    margin:  0 auto;
+    height: 1px;
+    background: #D0D3DD;
+}
+.contacts-group {
+	font-size: 0;
+}
+.contacts-group .contact{
+	width:24%;
+}
+.contact_img-wrapper{
+	display: inline-block;	
+	width: 100%;
+}
+.contact_img-wrapper img{
+	display: inline-block;	
+	width:150px;
+}
+.contact_name{
+  font-size: 18px;
+  color: rgb( 21, 21, 21 );
+  font-weight: bold;
+}
+.contact_phone{
+	font-size: 15px;
+}
+.contact_whois{
+  font-size: 15px;
+  color: #616161;
+}
+.pagin-question {
+	font-size: 0;
+	margin-left: -22px;
+}
+.pagin-question__item {
+	font-size: 15px;
+	font-family: "Calibri",Helvetica,Arial,sans-serif;
+	font-weight: bold;
+	border-bottom: 1px solid;
+	margin-right: 3px;
+	display: inline-block;
+	margin-left: 22px;
+	margin-bottom: 10px;
+	padding: 2px 0; 
+}
+.pagin-question__item.active {
+	background-color: #0c419e;
+	color: #fff;
+	border-radius: 3px;
+	padding: 2px 16px;
+}
+.contact-marker{
+	background: url(../img/contact-marker.png);
+	color: rgb( 21, 21, 21 );
+	display: inline-block;
+	width:89px;
+	position: absolute;
+	text-align:center;
+ 	 font-weight: bold;
+ 	 opacity: 0;
+ 	 visibility: hidden;
+ 	 transition: all .3s;
+}
+.img_wrap{
+	position: relative;
+	height:250px;
+}
+.contact-img{
+	position: absolute;
+	top:0;
+	width:100%;
+	opacity:0;
+	visibility: hidden;
+	transition: all .3s;
+}
+.contact-img.active{
+	opacity: 1;
+	visibility: visible;
+	transition: all .3s;
+}
+.contact-img.active .contact-marker{
+	opacity: 1;
+	visibility: visible;
+	transition: all .3s;
+	transition-delay: .3s; 
+} 
+.contact-img .contact-marker{
+	position: absolute;
+}

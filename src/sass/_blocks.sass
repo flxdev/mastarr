@@ -1,0 +1,787 @@
+.btn
+  display: inline-block
+  min-width: 180px
+  height: 35px
+  box-sizing: border-box
+  padding: 0 10px
+  border-radius: 3px
+  background: #FFF
+  box-shadow: 1px 2px 3px 0px rgb(0, 17, 48)
+  +spacing(70)
+  text-align: center
+  +f(b)
+  font-size: 13px
+  line-height: normal
+  font-style: normal
+  text-transform: uppercase
+  text-decoration: none
+  color: #000
+  +trans
+  transition-property: color, background
+  > span
+    display: inline-block
+    vertical-align: middle
+  &:hover
+    background: $red
+    color: #FFF
+  &:active
+    transform: translate(0, 1px)
+    box-shadow: none
+  .icon,
+  .ico
+    margin-right: 10px
+  .ico-phone
+    font-size: 20px
+
+a.btn
+  line-height: 35px
+
+.btn_gray
+  &:not(:hover)
+    background: $lightbg
+
+.btn_blue
+  color: #1165AB
+  box-shadow: 0 2px 3px #88A9E2
+  &:hover
+    background: $blue
+    color: #FFF
+
+.btn_gray
+  background: $lightbg
+
+.btn_blue-color
+  color: #1165AB
+
+.btn_w230
+  min-width: 230px
+
+.btn_w340
+  width: 340px
+
+.btn_fw
+  display: block
+  width: 100%
+
+.btn-wrap
+  margin-top: 30px
+
+
+.icon
+  display: inline-block
+
+
+.logo
+  display: block
+  +hidetext
+  +sprite(logo)
+
+
+.schedule
+  display: inline-block
+  font-size: 13px
+  line-height: normal
+
+.schedule__time
+  color: $lightgray
+  margin-right: 10px
+  display: inline-block
+  vertical-align: middle
+
+.schedule__days
+  display: inline-block
+  vertical-align: middle
+  font-size: 0
+  white-space: nowrap
+  li
+    display: inline-block
+    vertical-align: middle
+    margin-left: 4px
+    background: #D0D5E0
+    width: 11px
+    height: 11px
+    border-radius: 50%
+    &:first-child
+      margin-left: 0
+    &.is-workday
+      background: #012C77
+
+
+.phone-number
+  font-size: 13px
+  line-height: normal
+  color: $lightgray
+  > span,
+  > a
+    display: inline-block
+    vertical-align: middle
+  > span
+    margin-right: 10px
+  > a
+    text-decoration: none
+    font-size: 22px
+    +f(b)
+    color: $link
+    +spacing(30)
+
+.phone-number_light
+  > span
+    color: rgba(#FFF, 0.4)
+  > a
+    color: #FFF
+
+.phone-number_large
+  padding-left: 50px
+  position: relative
+  &:before
+    @extend %ico
+    content: $ico-phone
+    font-size: 47px
+    position: absolute
+    bottom: 4px
+    left: 0
+    color: $link
+    // +sprite(phone-large)
+  > a
+    font-size: 48px
+    white-space: nowrap
+  > span
+    margin-bottom: 9px
+
+
+.title
+  display: block
+  margin-bottom: 25px
+  font-size: 30px
+  line-height: 1.4
+  +f(b)
+  color: $dark
+  +spacing(30)
+  > a
+    color: inherit
+    text-decoration: none
+    border-bottom: 1px solid
+    +trans
+    &:hover
+      color: $red
+      border-color: rgba($red, 0.3)
+
+.title_medium
+  font-size: 24px
+  margin: 33px 0 18px
+  // +spacing(30)
+  &:first-child
+    margin-top: 0
+
+.title_small
+  font-size: 20px
+  margin: 33px 0 13px
+  // +spacing(30)
+  &:first-child
+    margin-top: 0
+
+.title_smallest
+  font-size: 18px
+  margin: 33px 0 13px
+  // +spacing(30)
+  &:first-child
+    margin-top: 0
+
+.title_link
+  display: inline-block
+  font-size: 24px
+  color: $link
+  // +spacing(30)
+  > a, > span
+    border-bottom: 1px solid
+    border-color: $link
+    border-color: rgba($link, 0.3)
+    +trans
+  > span
+    &:hover
+      color: $red
+      border-color: $red
+      border-color: rgba($red, 0.3)
+
+.title_large
+  font-size: 42px
+  line-height: 1
+
+.title_white
+  color: #FFF
+  > a
+    border-color: #FFF
+    border-color: rgba(#FFF, 0.3)
+
+.title_nomrg
+  margin: 0
+
+.title_center
+  text-align: center
+
+
+.number
+  width: 240px
+  height: 240px
+  box-sizing: border-box
+  padding: 35px 40px
+  background: #01348C
+  color: #FFF
+  overflow: hidden
+
+.number__value
+  display: inline-block
+  vertical-align: bottom
+  font-size: 100px
+  +f(b)
+  line-height: 1
+  +longshadow(#00276E)
+
+.number__vertical
+  display: inline-block
+  vertical-align: bottom
+  font-size: 18px
+  width: 18px
+  transform: rotate(-90deg)
+  transform-origin: 0 0
+  +f(b)
+  text-transform: uppercase
+  +spacing(30)
+  +longshadowmod(#00276E)
+
+.number__text
+  position: relative
+  z-index: 2
+  margin-top: -5px
+  display: block
+  font-size: 15px
+  line-height: 1.47
+
+
+.text
+  color: $dark
+  font-size: 15px
+  +spacing(30)
+  > p
+    margin: 15px 0
+    &:first-child
+      margin-top: 0
+    &:last-child
+      margin-bottom: 0
+
+.text_light
+  +color(light)
+
+.text_gray
+  +color(gray)
+  a
+    color: rgba($blue, 0.7)
+
+
+.news
+  display: block
+  text-decoration: none
+  color: $link
+  font-size: 18px
+  +spacing(30)
+  line-height: 1.55
+  &:hover
+    .news__title
+      color: $red
+      border-color: rgba($red, 0.3)
+    .news__pic:after
+      opacity: 0.42
+      visibility: visible
+
+.news__pic
+  overflow: hidden
+  margin-bottom: 20px
+  position: relative
+  img
+    display: block
+    margin: auto
+    max-width: 100%
+  &:after
+    content: ""
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    +trans
+    visibility: hidden
+    opacity: 0
+    background: #FFF
+
+.news__title
+  border-bottom: 1px solid
+  border-color: rgba($link, 0.3)
+  +f(b)
+  +trans
+
+.news__date
+  margin-left: 15px
+  +f(r)
+  font-size: 15px
+  +color(gray)
+
+.news_tile
+  box-sizing: border-box
+  .news__title
+    +f(r)
+  .news__date
+    display: block
+    margin: 5px 0 0
+
+.news_object
+  color: $dark
+  &:hover
+    color: $dark
+    .news__pic:after
+      opacity: 0.42
+  .news__pic
+    margin-bottom: 10px
+    &:after
+      background: $blue
+
+
+
+.flex-logotype
+  position: relative
+  display: inline-block
+  vertical-align: middle
+  padding-left: 37px
+  +f(b)
+  font-size: 15px
+  text-decoration: none
+  text-transform: uppercase
+  color: $link
+  +trans
+  &:before
+    @extend %ico
+    content: $ico-flex-media
+    position: absolute
+    top: 50%
+    left: 0
+    margin-top: -15px
+    // +sprite(flex-logo)
+    font-size: 30px
+  &:hover
+    color: $red
+
+
+.breadcrumbs
+  margin: 0 0 20px
+  color: $link
+  color: rgba($link, 0.7)
+  font-size: 0
+  +spacing(30)
+  > li
+    display: inline-block
+    font-size: 15px
+    vertical-align: middle
+    position: relative
+    &:before
+      content: " / "
+      display: inline-block
+      margin: 0 10px
+      color: $lightgray
+    &:first-child
+      &:before
+        display: none
+    &:last-child
+      a
+        color: #000
+        color: rgba(#000, 0.7)
+        cursor: default
+        pointer-events: none
+  a
+    text-decoration: none
+    color: inherit
+    +trans(color)
+    &:hover
+      color: $red
+
+
+.pagi
+  position: relative
+  margin: 50px 0
+  box-sizing: border-box
+  background: $lightbg
+  border-top: 1px solid $hrcolor
+  font-size: 0
+  padding: 0 100px
+  text-align: center
+
+.pagi__btn
+  display: inline-block
+  font-size: 18px
+  color: $link
+  +trans(color)
+  line-height: 66px
+  +spacing(30)
+  height: 66px
+  width: 66px
+  text-align: center
+  text-decoration: none
+  background: none
+  user-select: none
+  &:hover
+    color: $red
+  &.is-active
+    background: #D1D4DD
+    color: #000
+  &.is-inactive
+    color: rgba($dark, 0.3)
+    cursor: default
+    pointer-events: none
+
+.pagi__prev,
+.pagi__next
+  position: absolute
+  top: 0
+  width: 100px
+
+.pagi__prev
+  left: 0
+
+.pagi__next
+  right: 0
+
+
+.scroll-to-top
+  background: #FFF
+  background: rgba(#FFF, 0.5)
+  box-sizing: border-box
+  border-radius: 50%
+  padding: 7px
+  color: #012C77
+  color: rgba(#012C77, 0.2)
+  +trans(color)
+  font-size: 48px
+  .icon,
+  .ico
+    display: block
+  &:hover
+    color: $red
+
+
+.heading
+  margin-bottom: 40px
+  padding-bottom: 20px
+  border-bottom: 1px solid $hrcolor
+  +clr
+  .title
+    display: inline
+    margin: 0
+    vertical-align: middle
+  .file
+    float: right
+    margin-top: 8px
+
+.heading__date
+  vertical-align: middle
+  margin-left: 15px
+  +f(r)
+  font-size: 15px
+  +color(gray)
+
+.file
+  display: inline-block
+  position: relative
+  color: $link
+  text-decoration: none
+  font-size: 18px
+  +trans(color)
+  white-space: nowrap
+  +f(b)
+  &:before
+    // content: ""
+    // +sprite(file)
+    @extend %ico
+    content: $ico-file
+    font-size: 24px
+    display: inline-block
+    vertical-align: middle
+    margin-right: 10px
+  .icon
+    vertical-align: middle
+    margin-right: 10px
+  > span
+    display: inline-block
+    vertical-align: middle
+  &:hover
+    color: $red
+
+.file__size
+  display: inline-block
+  vertical-align: middle
+  position: relative
+  margin-left: 10px
+  top: 1px
+  font-size: 15px
+  color: #989898
+  +f(r)
+
+.file_small
+  font-size: 15px
+
+.more-link
+  margin-top: 43px
+  color: $link
+  +trans(color)
+  text-decoration: none
+  &:hover
+    color: $red
+  a
+    color: inherit
+    text-decoration: none
+
+a.more-link
+  display: inline-block
+
+
+.aside-nav
+  background: #EDEFF3
+  padding: 7px 15px
+  font-size: 18px
+  line-height: 1.55
+  border-bottom: 3px solid #D4D6DB
+
+.aside-nav__item
+  border-top: 1px solid #D5D9DF
+  &:first-child
+    border-top: none
+
+.aside-nav__link
+  display: block
+  position: relative
+  color: inherit
+  text-decoration: none
+  padding: 11px 0
+  color: $link
+  +trans(color)
+  > span
+    position: relative
+    z-index: 1
+  &:hover
+    color: $red
+  &.is-active
+    color: #232323
+    +f(b)
+    &:before
+      content: ""
+      position: absolute
+      z-index: 0
+      top: -1px
+      left: -7px
+      right: -7px
+      bottom: 0
+      background: #FFF
+      border-radius: 3px
+      box-shadow: 0 1px 2px rgba(136, 169, 226, 0.76)
+
+.aside-nav__subnav
+  font-size: 15px
+  padding: 15px 0
+
+.aside-nav__label
+  display: block
+  margin-bottom: 4px
+  color: #858C9A
+
+.aside-nav__sublink
+  display: block
+  padding: 8px 0 8px 20px
+  position: relative
+  line-height: 1.2
+  > span
+    position: relative
+    z-index: 1
+  &:before
+    content: ""
+    position: absolute
+    z-index: 1
+    top: 15px
+    left: 0
+    width: 0
+    height: 0
+    border: 3px solid $link
+    border-radius: 50%
+  &.is-active
+    color: #232323
+    +f(b)
+    &:after
+      content: ""
+      position: absolute
+      z-index: 0
+      top: -1px
+      left: -7px
+      right: -7px
+      bottom: 0
+      background: #FFF
+      border-radius: 3px
+      box-shadow: 0 1px 2px rgba(136, 169, 226, 0.76)
+
+
+.product-tile
+  display: block
+  position: relative
+  vertical-align: top
+  box-sizing: border-box
+  padding: 20px 20px 75px 20px
+  min-height: 340px
+  background: #FFF
+  box-shadow: 0 0 0 1px #BFC5D0
+  text-decoration: none
+  color: inherit
+  +trans(box-shadow)
+  &:hover
+    box-shadow: 0 0 21px rgba(0, 40, 111, 0.18)
+    .title_link
+      > *
+        color: $red
+        border-color: rgba($red, 0.3)
+    .product-tile__logos
+      opacity: 1
+    .btn_blue
+      color: #FFF
+      background: $blue
+
+.product-tile__logos
+  margin: 20px -15px 0 0
+  font-size: 0
+  opacity: 0.7
+  +trans(opacity)
+  > li
+    display: inline-block
+    vertical-align: bottom
+    margin-right: 15px
+  img
+    display: block
+    max-width: 100%
+
+.product-tile__amount
+  display: block
+  margin-top: 5px
+  +f(i)
+  font-size: 13px
+  line-height: 1.7
+  color: rgba(#000, 0.6)
+
+.product-tile__footer
+  position: absolute
+  bottom: 0
+  left: 0
+  right: 0
+  padding: 0 20px 30px 20px
+  line-height: 35px
+  +clr
+  .btn
+    float: left
+
+.product-tile__price
+  float: right
+
+
+.product-link
+  display: block
+  text-decoration: none
+  color: $blue
+  font-size: 18px
+  line-height: 1.555
+  +f(b)
+  &:hover
+    .product-link__text
+      border-color: $red
+      border-color: rgba($red, 0.3)
+      color: $red
+
+.product-link__icon
+  +vertical
+  white-space: nowrap
+  text-align: left
+  &:before
+    min-height: 110px
+  img
+    display: inline-block
+    vertical-align: middle
+
+.product-link__text
+  border-bottom: 1px solid
+  border-color: $blue
+  border-color: rgba($blue, 0.3)
+  +trans
+
+
+.promo
+  margin: 25px 0
+  box-sizing: border-box
+  padding: 36px 20px 36px 250px
+  background: $blue
+  color: #FFF
+  font-size: 18px
+  line-height: 35px
+  +clr
+  .phone-number
+    display: inline-block
+    position: relative
+    margin: 0 0 0 -130px
+  .btn
+    float: right
+  &:first-child
+    margin-top: 0
+  &:last-child
+    margin-bottom: 0
+
+.promo__contacts
+  margin-top: 30px
+  text-align: left
+  clear: both
+  +f(b)
+  line-height: 1.555
+  > span
+    display: block
+    font-size: 20px
+  > ul
+    margin: 10px 0
+
+.like-link
+  color: $link
+  border-bottom: 1px solid
+  border-color: $link
+  border-color: rgba($link, 0.3)
+  +trans
+  &:hover
+    color: $red
+    border-color: $red
+    border-color: rgba($red, 0.3)
+
+.like-link_light
+  color: #669DFB
+  border-color: #669DFB
+  border-color: rgba(#669DFB, 0.3)
+
+.dashed-line
+  display: block
+  margin: 28px 0
+  height: 0
+  border: dashed $hrcolor
+  border-width: 1px 0 0
+  &:first-child
+    margin-top: 0
+  &:last-child
+    margin-bottom: 0
+
+.large-btn
+  font-size: 18px
+  display: block
+  line-height: 67px
+  text-decoration: none
+  background: $lightbg
+  text-align: center
+  margin: 50px 0 35px
+  &:hover
+    .like-link
+      color: $red
+      border-color: rgba($red, 0.3)

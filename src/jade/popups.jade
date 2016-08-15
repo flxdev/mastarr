@@ -1,0 +1,66 @@
+extends _layout
+
+block content
+  .l
+
+    button.btn.btn_gray(type="button", data-popup="#message")
+      | Сообщение
+
+    br
+    br
+
+    button.btn.btn_gray(type="button", data-popup="#driving-direction")
+      | Как добраться
+
+    br
+    br
+
+    button.btn.btn_gray(type="button", data-popup="#callback")
+      | Обратный звонок
+
+    br
+    br
+
+    button.btn.btn_gray(type="button", data-popup="#form")
+      | Форма заказа
+
+    br
+    br
+
+    //- button.btn.btn_gray(type="button", data-popup="#gallery")
+    //-   | Слайдер
+
+    //- //BEGIN popup
+    //- .popup.popup_gallery#gallery
+    //-   .popup__inner
+    //-     button.popup__close(type="button")
+    //-       | Закрыть
+
+    //-     //BEGIN popup__slide
+    //-     .popup-slider
+    //-       .popup-slider__slides
+    //-         div.popup-slider__slide: img(src="img/certificats/certificat.jpg", width="583", height="825", alt="certificat")
+    //-         div.popup-slider__slide: img(src="img/certificats/certificat.jpg", width="583", height="825", alt="certificat")
+    //-         div.popup-slider__slide: img(src="img/certificats/certificat.jpg", width="583", height="825", alt="certificat")
+    //-       button.popup-slider__prev.ico.ico-slider-prev(type="button")
+    //-       button.popup-slider__next.ico.ico-slider-next(type="button")
+    //-     //END popup__slide
+    //- //END popup
+
+    div
+      a.js-box(rel="gallery", href="img/certificats/certificat.jpg")
+        img(src="img/certificats/certificat.jpg", width="100", height="150", alt="certificat")
+      a.js-box(rel="gallery", href="img/certificats/certificat.jpg")
+        img(src="img/certificats/certificat.jpg", width="100", height="150", alt="certificat")
+      a.js-box(rel="gallery", href="img/certificats/certificat.jpg")
+        img(src="img/certificats/certificat.jpg", width="100", height="150", alt="certificat")
+    br
+    br
+    div
+      a.js-box(href="img/certificats/certificat.jpg")
+        img(src="img/certificats/certificat.jpg", width="100", height="150", alt="certificat")
+
+    include popups/_message
+    include popups/_driving-direction
+    include popups/_callback
+    include popups/_form

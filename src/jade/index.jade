@@ -1,0 +1,94 @@
+block vars
+  - var bodyClass = 'main-page'
+  - var menuMod = 'menu_opened'
+  - var menuWrapperMod = 'menu-wrapper_large'
+  - var headerMod = 'header_large'
+
+extends _layout
+
+append scripts
+  script(type="text/javascript", src="js/lib/parallax.min.js")
+
+block title
+  title Main
+
+block content
+
+  //BEGIN map-wrapper
+  .map-wrapper(
+      data-parallax="scroll",
+      data-image-src="img/map-index.jpg",
+      data-natural-width="1600",
+      data-natural-height="1100",
+      data-bleed="10",
+      data-speed="0.5")
+    .l
+      .columns
+        .columns__text
+          h2.title.title_white
+            | Доставка по всей территории Российской Федерации
+
+          .text.text_light
+            p.
+              Компания «Масстар» поставляет органическое стекло (акриловое стекло)
+              на российский рынок уже более 18 лет. Мы ежемесячно отгружаем десятки тонн оргстекла сотням
+              потребителей <a class="like-link like-link_light" href="#">от Калининграда до Владивостока</a>.
+              Благодаря большим оборотам мы продаем оргстекло по низким ценам.
+            p.
+              Наша компания является VIP-дилером российского производителя
+              органического стекла — завода «Дзержинское оргстекло».
+            .btn-wrap
+              button.btn.btn_w230(type="button", data-popup="#callback")
+                | Бесплатная консультация
+        .columns__figure
+          include partials/_slider
+          .number
+            strong.number__value
+              | 23
+            span.number__vertical
+              | Тонны
+            spam.number__text.
+              Оргстекла ежемесячно отгружаем сотням наших клиентов
+  //END map-wrapper
+
+  //BEGIN columns
+  .l
+    .columns
+      .columns__figure
+        a(href="#").tile
+          .tile__head(style="background-image:url('img/news.jpg')")
+            span.tile__label
+              | 25 Сентября 2015
+          .tile__content
+            strong.title.title_link
+              span
+                | «Масстар» заканчивает строительство экранов на М-5 «Урал»
+            p.text.text_gray.
+              Работы были начаты в 2012 года и сейчас выходят
+              на завершающую стадию. Срок окончания работ – сентябрь
+              2014 года.
+      .columns__text
+        .news-block
+          h2.title.title_white
+            a(href="#") Новости и события
+
+          a.news(href="#")
+            strong.news__title
+              | Сатинированные (матированные) оргстекло
+              | и поликарбонат перестали быть дефицитными продуктами
+            span.news__date
+              | 25 Сентября 2015
+          a.news(href="#")
+            strong.news__title
+              | Компания «Масстар» начала монтаж экранов на Дмитровском шоссе
+            span.news__date
+              | 18 Сентября 2015
+          a.news(href="#")
+            strong.news__title
+              | «Масстар» заканчивает строительство экранов на М-5 «Урал»
+            span.news__date
+              | 3 Сентября 2015
+  //END columns
+
+  include popups/_callback
+

@@ -1,0 +1,28 @@
+//BEGIN aside-nav
+ul.aside-nav
+  li.aside-nav__item
+    a.aside-nav__link(href="#")
+      span Монолитный поликарбонат
+  li.aside-nav__item
+    a.aside-nav__link(href="#", class= asideNavActive)
+      span Сотовый поликарбонат
+    if asideSubNav
+      .aside-nav__subnav
+        span.aside-nav__label Комплектующие:
+        ul
+          li: a.aside-nav__sublink(href="#", class= asideSubNavActive)
+            span Торцевой профиль
+          li: a.aside-nav__sublink(href="#")
+            span Соединительный неразъемный
+          li: a.aside-nav__sublink(href="#")
+            span «Полискреп»
+  li.aside-nav__item
+    a.aside-nav__link(href="#")
+      span Полистирол в листах
+  li.aside-nav__item
+    a.aside-nav__link(href="#")
+      span АБС в листах
+  li.aside-nav__item
+    a.aside-nav__link(href="#")
+      span Вспененный ПВХ
+//END aside-nav
