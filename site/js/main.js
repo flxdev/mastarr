@@ -676,7 +676,6 @@ if($('.contact_img-wrapper').length){
          event.preventDefault();
         _ = $(this);
        var id = _.attr('href');
-       console.log(id);
        _.addClass('active').siblings().removeClass('active');
        
     $(".img_wrap").find(id).addClass('active').siblings().removeClass('active');
