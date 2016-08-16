@@ -669,15 +669,16 @@ module.exports = Slider;
 
 },{}]},{},[1])
 if($('.contact_img-wrapper').length){
-
+   
     var btn = $('.pagin-question__item'),
         item = $('.contact-img')
-    btn.on('click', function(){
+    btn.on('click', function(event){
+         event.preventDefault();
         _ = $(this);
        var id = _.attr('href');
        console.log(id);
        _.addClass('active').siblings().removeClass('active');
-       event.preventDefault();
+       
     $(".img_wrap").find(id).addClass('active').siblings().removeClass('active');
     });
 };

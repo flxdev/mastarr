@@ -61,17 +61,26 @@
 	margin-bottom: 10px;
 	padding: 2px 0; 
 }
+.pagin-question__item:hover{
+	color:#0C419E !important;
+}
 .pagin-question__item.active {
 	background-color: #0c419e;
 	color: #fff;
 	border-radius: 3px;
-	padding: 2px 16px;
+	padding: 2px 6px;
+}
+.pagin-question__item.active:hover{
+	color:#fff !important;
 }
 .contact-marker{
 	background: url(../img/contact-marker.png);
 	color: rgb( 21, 21, 21 );
+	background-repeat: no-repeat;
 	display: inline-block;
 	width:89px;
+	height: 45px;
+	line-height: 2;
 	position: absolute;
 	text-align:center;
  	 font-weight: bold;
