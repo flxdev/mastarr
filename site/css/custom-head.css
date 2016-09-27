@@ -40,6 +40,7 @@
 }
 .product-header-main > .product-header-price{
 	width: 15%;
+	min-height:1px;
 }
 .product-header-main > .product-header-btn{
 	width: 34%;
