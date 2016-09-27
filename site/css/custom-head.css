@@ -36,6 +36,7 @@
 .product-header-main .product-inner-phone{
 	font-family: "Calibri-bold", Helvetica, Arial, sans-serif;
 	color:#000;
+	padding-left:9px;
 }
 .product-header-main > .product-header-price{
 	width: 15%;
@@ -48,6 +49,7 @@
 	margin-top:13px;
 	background: #E43C3C;
     color: #FFF;
+    margin-right: 0;
 }
 .product-header-btn > .btn_right:hover{
 	background: #e06464;
