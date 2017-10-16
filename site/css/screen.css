@@ -657,8 +657,8 @@ a.more-link { display: inline-block; }
 .links:after { content: " "; display: table; clear: both; }
 .links a { text-decoration: none; display: inline-block; color: #012C77; -webkit-transition: color 0.2s linear; transition: color 0.2s linear; }
 .links a:hover { color: #E43C3C; }
-
-.links__list { float: left; width: 25%; box-sizing: border-box; padding: 0 50px 0 0; }
+/*@TODO for #2 (width: 20%)*/
+.links__list { float: left; width: 20%; box-sizing: border-box; padding: 0 50px 0 0; }
 .links__list > li { margin-top: 22px; }
 .links__list > li:first-child { margin-top: 0; }
 

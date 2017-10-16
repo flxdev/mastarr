@@ -667,17 +667,6 @@ Slider.prototype = {
 
 module.exports = Slider;
 
-//@TODO for #1 (new script)
-	$('.table-list-item').on('click', function(){
-		var i = $(this).data('table')
-    var h = $('.table_service').find('.tbody')
-		var a = h.eq(i)
-		h.addClass('hidden')
-		a.removeClass('hidden')
-		$(this).siblings().removeClass('active')
-		$(this).addClass('active')
-	})
-
 },{}]},{},[1])
 
 //# sourceMappingURL=main.js.map
