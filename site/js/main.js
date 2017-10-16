@@ -667,18 +667,17 @@ Slider.prototype = {
 
 module.exports = Slider;
 
+//@TODO for #1 (new script)
+	$('.table-list-item').on('click', function(){
+		var i = $(this).data('table')
+    var h = $('.table_service').find('.tbody')
+		var a = h.eq(i)
+		h.addClass('hidden')
+		a.removeClass('hidden')
+		$(this).siblings().removeClass('active')
+		$(this).addClass('active')
+	})
+
 },{}]},{},[1])
-if($('.contact_img-wrapper').length){
-   
-    var btn = $('.pagin-question__item'),
-        item = $('.contact-img')
-    btn.on('click', function(event){
-         event.preventDefault();
-        _ = $(this);
-       var id = _.attr('href');
-       _.addClass('active').siblings().removeClass('active');
-       
-    $(".img_wrap").find(id).addClass('active').siblings().removeClass('active');
-    });
-};
+
 //# sourceMappingURL=main.js.map

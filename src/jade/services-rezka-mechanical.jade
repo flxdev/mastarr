@@ -1,0 +1,573 @@
+extends _layout
+
+block vars
+  - var asideNavActive = 'is-active'
+  - var asideSubNav = true
+
+block title
+  title Plastiki
+
+
+//@TODO #1 NEW PAGE HERE
+block content
+  .l
+    .l-columns
+      aside.l-columns__aside
+        ul.aside-nav
+          li.aside-nav__item
+            a.aside-nav__link(href="#")
+              span Механическая<br>линейная резка
+          li.aside-nav__item
+            a.aside-nav__link.is-active(href="#")
+              span Фрезерная резка
+          li.aside-nav__item
+            a.aside-nav__link(href="#")
+              span Лазерная резка
+
+      .l-columns__main
+        //BEGIN breadcrumbs
+        ul.breadcrumbs
+          li: a(href="#") Главная
+          li: a(href="#") Сопутствующие услуги
+          li: a(href="#") Механическая линейная резка
+        //END breadcrumbs
+
+        //BEGIN main content
+        .heading
+          style.
+            .btn_right{
+              float: right;
+              background-color: #fa2d3b;
+              color: #fff;
+            }
+          a(href="#").btn_right.btn.btn_blue-color.addHiddenValue Заказать услугу
+          h1.title.title_large
+            | Механическая линейная резка
+
+        .article
+          .l-col
+            .column
+              img(src="img/rezka-mech.jpg")
+            .column
+              p Наша компания оказывает услуги по механической резке дисковой пилой листового пластика: оргстекла, монолитного и сотового поликарбоната, полистирола, ПВХ, АБС, ПЭТ. Используем как материалы заказчика, так и имеющиеся на складе.
+          style.
+            .line-bottom{
+              border-bottom: 1px solid #D0D3DD;
+              padding-bottom: 30px;
+            }
+          .l-col.line-bottom
+            .column
+              .empty-block
+              h3.title.title_medium Особенности
+              ul.marked-list
+                li
+                  p Минимальный размер: <b>100x100 мм</b>
+                li
+                  p Погрешность при резке: <b>± 2 мм.</b>
+                li
+                  p Торец материала будет <b>матовым</b>
+                li
+                  p Толщина пильного дерева: <b>3 мм</b>
+            .column
+              .empty-block
+              h3.title.title_medium Сроки исполнения
+              p При условия предоставления собственного материала или его покупки на месте со склада ООО “Масстар”, резка осуществляется день в день после оплаты.
+          style.
+            .file-right{
+              float: right;
+              margin-top: 30px;
+            }
+          a.file(href="#").file-right
+            span Скачать прайс
+          h3.title.title_medium
+            | Стоимость
+          p
+            | Рассчитывается м.п. по периметру деталей.<br>
+            | Окончательная стоимость от толщины и вида материала.
+
+          //BEGIN table
+          style.
+            .table-wrapper{
+              display: flex;
+              justify-content: center;
+              align-items: flex-start;
+              max-width: 100%;
+              border: 1px solid #eee;
+              background-color: #f4f7fe;
+            }
+            .table-left .table-head{
+              height: 82px;
+              color: #fff;
+              background-color: #0C419E;
+              font-weight: bold;
+              padding-left: 20px;
+              display: flex;
+              align-items: flex-end;
+              padding-bottom: 34px;
+            }
+            .table-left{
+              width: 24%;
+              min-height: 100%;
+            }
+            .table-list .table-list-item{
+              padding: 10px 15px;
+              cursor: pointer;
+            }
+            .table-list .table-list-item span{
+              text-decoration: underline dotted;
+              text-underline-position: under;
+              color: #0C419E;
+            }
+            .table-list .table-list-item:hover{
+              background-color: #fff;
+            }
+            .table-list .table-list-item:hover span{
+              text-decoration: none;
+              color: #333;
+              font-weight: bold;
+            }
+            .table-list .table-list-item.active{
+              background-color: #fff;
+            }
+            .table-list .table-list-item.active span{
+              color: #333;
+              text-decoration: none;
+              font-weight: bold;
+            }
+            .table_service{
+              width: 76%;
+              min-width: 400px;
+              overflow-y: auto;
+            }
+            .table_service thead{
+              text-align: left;
+              background-color: #0C419E;
+              color: #fff;
+            }
+            .table_service thead th{
+              padding-bottom: 12px;
+              padding-left: 20px;
+            }
+            .table_service thead th:first-child{
+              width: 140px;
+            }
+            .table_service thead span{
+              display: block;
+              font-weight: normal;
+              font-style: italic;
+              opacity: .6;
+            }
+            .table_service tbody td{
+              text-align: left;
+              padding-bottom: 15px;
+              padding-top: 15px;
+              padding-left: 20px;
+            }
+            .table_service tbody tr{
+              background-color: #fff;
+            }
+            .table_service tbody tr:not(:last-child){
+              border-bottom: 1px solid #ebebeb;
+            }
+            .table_service .hidden{
+              display: none;
+            }
+            .table_service .hidden.active{
+              display: table-cell;
+            }
+          .table-wrapper
+            .table-left
+              .table-head
+                p Материал
+              .table-list
+                .table-list-item(data-table='0').active
+                  span Оргстекло
+                .table-list-item(data-table='1')
+                  span Полистерол
+                .table-list-item(data-table='2')
+                  span АБС
+                .table-list-item(data-table='3')
+                  span Вспененный ПВХ
+                .table-list-item(data-table='4')
+                  span ПЭТ
+            table.table_service
+              thead
+                tr
+                  th
+                  th(colspan='3' style="padding-top: 20px") Цена* руб/п.м., в зависимости от тиража
+                tr
+                  th Толщина, мм
+                  th
+                    span до 100 п.м.
+                  th
+                    span от 100 п.м.
+                    span до 300 п.м.
+                  th
+                    span от 300 п.м.
+              tbody.tbody
+                tr
+                  td 2, 3, 4, 5, 6
+                  td
+                    b 40
+                  td
+                    b 35
+                  td
+                    b Договорная
+                tr
+                  td 1, 1.5, 1.8
+                  td
+                    b 40
+                  td
+                    b 35
+                  td
+                    b Договорная
+                tr
+                  td 1, 1.5, 1.8
+                  td
+                    b 40
+                  td
+                    b 35
+                  td
+                    b Договорная
+                tr
+                  td 1, 1.5, 1.8
+                  td
+                    b 40
+                  td
+                    b 35
+                  td
+                    b Договорная
+              tbody.tbody.hidden
+                tr
+                  td 2, 3, 4, 5, 6
+                  td
+                    b 40
+                  td
+                    b 35
+                  td
+                    b Договорная
+                tr
+                  td 1, 1.5, 1.8
+                  td
+                    b 40
+                  td
+                    b 35
+                  td
+                    b Договорная
+                tr
+                  td 1, 1.5, 1.8
+                  td
+                    b 40
+                  td
+                    b 35
+                  td
+                    b Договорная
+                tr
+                  td 1, 1.5, 1.8
+                  td
+                    b 40
+                  td
+                    b 35
+                  td
+                    b Договорная
+                tr
+                  td 1, 1.5, 1.8
+                  td
+                    b 40
+                  td
+                    b 35
+                  td
+                    b Договорная
+                tr
+                  td 1, 1.5, 1.8
+                  td
+                    b 40
+                  td
+                    b 35
+                  td
+                    b Договорная
+                tr
+                  td 1, 1.5, 1.8
+                  td
+                    b 40
+                  td
+                    b 35
+                  td
+                    b Договорная
+                tr
+                  td 1, 1.5, 1.8
+                  td
+                    b 40
+                  td
+                    b 35
+                  td
+                    b Договорная
+              tbody.tbody.hidden
+                tr
+                  td 2, 3, 4, 5, 6
+                  td
+                    b 40
+                  td
+                    b 35
+                  td
+                    b Договорная
+                tr
+                  td 1, 1.5, 1.8
+                  td
+                    b 40
+                  td
+                    b 35
+                  td
+                    b Договорная
+                tr
+                  td 1, 1.5, 1.8
+                  td
+                    b 40
+                  td
+                    b 35
+                  td
+                    b Договорная
+                tr
+                  td 1, 1.5, 1.8
+                  td
+                    b 40
+                  td
+                    b 35
+                  td
+                    b Договорная
+                tr
+                  td 1, 1.5, 1.8
+                  td
+                    b 40
+                  td
+                    b 35
+                  td
+                    b Договорная
+                tr
+                  td 1, 1.5, 1.8
+                  td
+                    b 40
+                  td
+                    b 35
+                  td
+                    b Договорная
+              tbody.tbody.hidden
+                tr
+                  td 2, 3, 4, 5, 6
+                  td
+                    b 40
+                  td
+                    b 35
+                  td
+                    b Договорная
+                tr
+                  td 1, 1.5, 1.8
+                  td
+                    b 40
+                  td
+                    b 35
+                  td
+                    b Договорная
+                tr
+                  td 1, 1.5, 1.8
+                  td
+                    b 40
+                  td
+                    b 35
+                  td
+                    b Договорная
+                tr
+                  td 1, 1.5, 1.8
+                  td
+                    b 40
+                  td
+                    b 35
+                  td
+                    b Договорная
+                tr
+                  td 1, 1.5, 1.8
+                  td
+                    b 40
+                  td
+                    b 35
+                  td
+                    b Договорная
+                tr
+                  td 1, 1.5, 1.8
+                  td
+                    b 40
+                  td
+                    b 35
+                  td
+                    b Договорная
+                tr
+                  td 1, 1.5, 1.8
+                  td
+                    b 40
+                  td
+                    b 35
+                  td
+                    b Договорная
+                tr
+                  td 1, 1.5, 1.8
+                  td
+                    b 40
+                  td
+                    b 35
+                  td
+                    b Договорная
+                tr
+                  td 1, 1.5, 1.8
+                  td
+                    b 40
+                  td
+                    b 35
+                  td
+                    b Договорная
+                tr
+                  td 1, 1.5, 1.8
+                  td
+                    b 40
+                  td
+                    b 35
+                  td
+                    b Договорная
+                tr
+                  td 1, 1.5, 1.8
+                  td
+                    b 40
+                  td
+                    b 35
+                  td
+                    b Договорная
+              tbody.tbody.hidden
+                tr
+                  td 2, 3, 4, 5, 6
+                  td
+                    b 40
+                  td
+                    b 35
+                  td
+                    b Договорная
+                tr
+                  td 1, 1.5, 1.8
+                  td
+                    b 40
+                  td
+                    b 35
+                  td
+                    b Договорная
+                tr
+                  td 1, 1.5, 1.8
+                  td
+                    b 40
+                  td
+                    b 35
+                  td
+                    b Договорная
+                tr
+                  td 1, 1.5, 1.8
+                  td
+                    b 40
+                  td
+                    b 35
+                  td
+                    b Договорная
+                tr
+                  td 1, 1.5, 1.8
+                  td
+                    b 40
+                  td
+                    b 35
+                  td
+                    b Договорная
+                tr
+                  td 1, 1.5, 1.8
+                  td
+                    b 40
+                  td
+                    b 35
+                  td
+                    b Договорная
+          p.caption * Цены указаны без учета стоимости материала за п.м.
+          //END table
+
+          h3.title.title_medium
+            | Этапы работы
+          style.
+            .part-item-header{
+              position: relative;
+              margin-bottom: 10px;
+            }
+            .part-item-header img{
+              position: absolute;
+              left: -25px;
+              top: -20px;
+              z-index: -1;
+              max-height: 50px;
+            }
+            .part-item-text p{
+              margin-bottom: 0;
+            }
+            .advantages__inner.left{
+              text-align: left;
+              padding: 20px 30px;
+            }
+            .advantages__inner.left a{
+              font-weight: bold;
+            }
+            .promo.padding-left-200{
+              padding-left: 200px
+            }
+          .l-col
+            .column.one-half
+              .part-item-wrapper
+                .part-item-header
+                  h4 1. Заявка
+                  img(src="img/part-1.png")
+                .part-item-text
+                  p В заявке перечислите контактные данные и укажите
+                  ul.marked-list
+                    li
+                      p Наименование материала
+                    li
+                      p Требуемый размер
+                    li
+                      p Идругие детали, которые посчитаете необходимыми
+            .column.one-half
+              .part-item-wrapper
+                .part-item-header
+                  h4 2. Расчет
+                  img(src="img/part-2.png")
+                .part-item-text
+                  p Обработка заявки, уточнение деталей и расчет стоимости заказа
+          .l-col(style="padding-top: 30px")
+            .column.one-half
+              .part-item-wrapper
+                .part-item-header
+                  h4 3. Оплата
+                  img(src="img/part-3.png")
+                .part-item-text
+                  ul.marked-list
+                    li
+                      p <b>Материал клиента:</b> клиент привозит материал и оплачивает услугу на месте в полном размере
+                    li
+                      p <b>Материал со склада ООО “Масстар”:</b> вносится предоплата в полном размере за услугу и материал
+            .column.one-half
+              .part-item-wrapper
+                .part-item-header
+                  img(src="img/part-4.png")
+                  h4 4. Резка
+                .part-item-text
+                  p От 1  до 2 рабочих дней (в зависимости от объема заказа). Клиент может забрать заказ самовывозом или воспользоваться услугой доставки пеосредством ТК
+          .advantages
+            .advantages__inner.left
+              p Заявки на лазерную резку принимаются на электронную почту: <a href="mailto:products@masstar.ru">products@masstar.ru</a> <br>и посредством формы заказа на сайте.
+          .promo.padding-left-200
+            a.btn.btn_blue-color(href="#")
+              | Заказать услугу
+            .phone-number.phone-number_light
+              span
+                | Задать вопросы вы можете по телефону:
+              a(href="tel:+74952150144")
+                | +7 (495) 215-01-44
