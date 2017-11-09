@@ -212,6 +212,9 @@ a.btn { line-height: 35px; }
 .btn_blue { color: #1165AB; box-shadow: 0 2px 3px #88A9E2; }
 .btn_blue:hover { background: #0C419E; color: #FFF; }
 
+.btn_blue-invert { margin-top: 22px; background: #0C419E; color: #FFF; box-shadow: 0 2px 3px #88A9E2; }
+.btn_blue-invert:hover { background: #fff; color: #1165AB; }
+
 .btn_gray { background: #EDEFF3; }
 
 .btn_blue-color { color: #1165AB; }
@@ -657,10 +660,13 @@ a.more-link { display: inline-block; }
 .links:after { content: " "; display: table; clear: both; }
 .links a { text-decoration: none; display: inline-block; color: #012C77; -webkit-transition: color 0.2s linear; transition: color 0.2s linear; }
 .links a:hover { color: #E43C3C; }
+
 /*@TODO for #2 (width: 20%)*/
 .links__list { float: left; width: 20%; box-sizing: border-box; padding: 0 50px 0 0; }
 .links__list > li { margin-top: 22px; }
 .links__list > li:first-child { margin-top: 0; }
+/*End #2*/
+
 
 .links__sublist { margin-bottom: 35px; padding-left: 10px; font-size: 16px; }
 .links__sublist > li { margin-top: 22px; }
