@@ -669,4 +669,16 @@ module.exports = Slider;
 
 },{}]},{},[1])
 
+
+//@TODO for #1
+if($('.table-list-item').length){
+  $('.table-list-item').on('click', function() {
+    $(this).siblings().removeClass('active')
+    $(this).addClass('active')
+    var tBody = $('.table_service').find('tBody')
+    tBody.addClass('hidden')
+    tBody.eq($(this).data('table')).removeClass('hidden')
+  })
+}
+
 //# sourceMappingURL=main.js.map
