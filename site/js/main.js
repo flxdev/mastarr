@@ -148,17 +148,27 @@ $(document).ready(function() {
         });
     });
 
+    // NEW CORRECT!
+    $.extend($.validator.messages, {
+        required: "Обязательное поле",
+        minlength: "Введите минимум 7 цифр",
+        email: "Заполните в формате 'name@mail.ru'"
+    });
     var validationOptions = {
         debug: true,
         rules: {
             phone: {
                 minlength: 7
+            },
+            agree: {
+                required: true
             }
         },
         errorPlacement: function(error, element) {
-            return true;
-        }
+            error.insertBefore(element);           
+        },
     };
+    // NEW CORRECT!
 
     // order form validation
     if (orderForm.length) {
@@ -668,17 +678,5 @@ Slider.prototype = {
 module.exports = Slider;
 
 },{}]},{},[1])
-
-
-//@TODO for #1
-if($('.table-list-item').length){
-  $('.table-list-item').on('click', function() {
-    $(this).siblings().removeClass('active')
-    $(this).addClass('active')
-    var tBody = $('.table_service').find('tBody')
-    tBody.addClass('hidden')
-    tBody.eq($(this).data('table')).removeClass('hidden')
-  })
-}
 
 //# sourceMappingURL=main.js.map
